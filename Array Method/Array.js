@@ -1,12 +1,12 @@
 
 // Filter Method
-// const scores = [10, 30, 15, 83, 70, 23, 90]
+const scores = [10, 30, 15, 83, 70, 23, 90]
 
-// const filter = scores.filter((score)=>{
-//     return score > 20
-// })
+const filter = scores.filter((score)=>{
+    return score > 20
+})
 
-// console.log(filter)
+console.log(filter)
 
 const users = [
     {name: 'Elisha', premium: true},
@@ -24,10 +24,10 @@ console.log(PremiumUsers)
 
 
 // Map Method
-// const Prices = scores.map((price) => {
-//     return price/2
-// })
-// console.log(Prices)
+const Prices = scores.map((price) => {
+    return price/2
+})
+console.log(Prices)
 
 const products = [
     {name: 'Stout', price: 20},
@@ -37,26 +37,26 @@ const products = [
     {name: '7up', price: 35},
 ]
 
-// const newproduct = products.map((product) =>{
-//     if (product.price > 30) {
-//         return{name: product.name, price: product.price/2}
-//     }
-//     else {
-//         return product;
-//     }
-// })
-// console.log(newproduct)
+const newproduct = products.map((product) =>{
+    if (product.price > 30) {
+        return{name: product.name, price: product.price/2}
+    }
+    else {
+        return product;
+    }
+})
+console.log(newproduct)
 
 
 // Reduce Method
-// const Result = scores.reduce((acc, curr) => {
-// if (curr>50){
-//     acc++;
-// }
-// return acc;
-// }, 0)
+const Results = scores.reduce((acc, curr) => {
+if (curr>50){
+    acc++;
+}
+return acc;
+}, 0)
 
-// console.log(Result)
+console.log(Results)
 
 const Numbers = [
     {Player: 'mario', score: 20},
