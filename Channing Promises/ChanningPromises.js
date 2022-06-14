@@ -1,19 +1,3 @@
-// Promise Example
-
-// const getSomething = ()=>{
-//     return new Promise((resolve, reject)=>{
-//         // fetch something
-//         // resolve('some data');
-//         reject('some error')
-//     })
-// }
-
-// getSomething().then((data)=>{
-//     console.log(data)
-// }).catch(err => {
-//     console.log(err)
-// })
-
 
 const getTodos = (resource, Callback) =>{
     return new Promise((resolve, reject) => {
@@ -35,12 +19,22 @@ const getTodos = (resource, Callback) =>{
     });
    
 }
-
-getTodos('Mario.json').then(data=>{
+getTodos('Lisha.json').then(data=>{
     console.log('promised resolve:', data);
+    return getTodos('Mario.json');
+  }).then(data=>{
+      console.log('Games resolved:', data);
+      return getTodos('Lisha.json');
+  }).then(data=>{
+    console.log('data 2 resolved:', data)
   }).catch(err=>{
       console.log('promise rejected:', err);
-  }) 
+  });
+  
+
+
+
+
 
 
 
